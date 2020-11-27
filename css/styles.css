@@ -1,0 +1,391 @@
+/*Estilos generales*/
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: open;
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+body {font-family: open;}
+    body a {text-decoration: none;}
+
+.wrapper {
+	overflow: hidden;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: minmax(100px, auto);
+}
+	.wrapper .header {
+		grid-column: 1/4;
+		grid-row: 1;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+		.wrapper .header .navegacion {
+			grid-column: 1/4;
+			margin-top: 0px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 20px 10px 20px;
+		}
+            .wrapper .header .navegacion nav{
+                z-index: 1000;
+                position: fixed;
+                top: 30px;
+                left: -200px;
+            }
+                .wrapper .header .navegacion nav ul{
+                    list-style-type: none;
+                }
+					.wrapper .header .navegacion nav ul li a {
+						color: #fff;
+						background-color: #1e1e1e;
+						display: inline-block;
+						width: 100%;
+						padding: 20px;
+					}
+					.wrapper .header .navegacion nav ul li a:hover {
+						color: #1e1e1e;
+						background-color: #ffcc00;
+					}
+			
+
+					
+					.dropdown-content {
+					    display: none;
+					    position: absolute;
+					    top: 0px;
+					    left: 180px;
+					    background-color: #f9f9f9;
+					    min-width: 120px;
+					    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+					    z-index: 1;
+					}
+					.dropdown-content a {
+					    color: black;
+					    padding: 12px 16px;
+					    text-decoration: none;
+					    display: block;
+					    text-align: left;
+					}
+
+					.dropdown-content a:hover {background-color: #f1f1f1}
+
+					.dropdown:hover .dropdown-content {
+					    display: block;
+					}
+			.wrapper .header .navegacion .menu-bar {
+				font-size: 2em;
+				color: #fff;
+				position: fixed;
+				right: 25px;
+				top: 30px;
+			}
+			.icon-menu {
+				color: #1e1e1e;
+				background-color: #ffcc00;
+				padding: 3px;
+				border-radius: 5px;
+				z-index: 20000;
+			}
+	.wrapper .header .slide {
+		grid-column: 1/4;
+		position: relative;
+		z-index: -1000;
+	}
+		.wrapper .header .slide img {
+			width: 100%;
+			height: auto;
+		}
+		.wrapper .header .slide .imagen {
+			position: absolute;
+			bottom: 0px;
+    		right: 0px;
+    		width: 100%;
+			background-color: #1e1e1e;
+			opacity: 0.8;
+			padding: 5px 0px;
+		}
+    		
+
+		.wrapper .header .slide .imagen h1 {
+			font-size: 1.5em;
+			color: #fff;
+			line-height: 1.2em;
+			text-align: center;
+		}
+/*estilos principales*/
+	.wrapper .main {
+		grid-column: 1/4;
+		grid-row: 2;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        
+	}
+
+		.wrapper .main .sitio {
+			background-color: #ffcc00;
+			grid-column: 1/5;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			
+		}	
+			.wrapper .main .sitio img {
+				width: 100%;
+			}
+			.wrapper .main .sitio p {
+				padding: 15px;
+			}
+			.wrapper .main .sitio a {
+				text-decoration: none;
+				color: #fff;
+				padding: 5px 20px;
+				background-color: #1e1e1e;
+			}
+/*########################3 Estilos footer #################################*/
+
+	.wrapper .footer {
+		background-color: #1e1e1e;
+		padding-top: 20px;
+		grid-column: 1/4;
+		grid-row: 3;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+		.wrapper .footer .menu_pie {
+			width: 80%;
+			margin-top: 20px;
+			font-size: 1em;
+			display: flex;
+			flex-flow: column;
+		}
+			.wrapper .footer .menu_pie a {
+				text-decoration: none;
+				color: #fff;
+				align-self: center;
+				padding: 5px;
+				border-bottom: 1px solid #fff;
+			}
+			.wrapper .footer .menu_pie a:hover {
+				color: #ffcc00;
+			}
+        .wrapper .sedes {
+            width: 100%;
+            margin: 15px 0 5px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+            .wrapper .sedes .sede1 {
+                width: 35%;
+                color: #fff;
+                font-size: 12px;
+            }
+		.wrapper .footer .pagos {
+			width: 100%;
+			display: flex;
+			flex-flow: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+            .wrapper .footer .pagos p {
+                width: 100%;
+                color: #fff;
+                margin: 15px 0;
+                text-align: center;
+            }
+            .wrapper .footer .pagos img{
+                margin:5px;
+                width: 35%;
+            }
+            .wrapper .footer .pagos h6 {
+                color: #fff;
+                margin: 15px 0;
+                text-align: center;
+            }
+
+/*############################  Media queries  ###############################3*/
+/*		Estilos para tableta	*/
+@media screen and (min-width: 650px){
+    .wrapper .main{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .wrapper .main .sitio {
+        width: 48%;
+    }
+    .wrapper .footer {
+        flex-direction: row;
+        padding-top: 5px;
+    }
+    .logopie {
+        align-self: flex-start;
+        margin: 10px;
+    }
+    .wrapper .footer .menu_pie {
+        text-align: center;
+        margin-top: 10px;
+        align-self: flex-start;
+    }
+    .wrapper .footer .menu_pie a {
+        border: none;
+    }
+    .wrapper .sedes {
+        align-self: flex-start;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+    }
+    .wrapper .sedes .sede1 {
+        width: 80%;
+        margin-top: 10px;
+    }
+    .wrapper .footer .pagos {
+        flex-direction: column;
+        align-self: flex-start;
+    }
+    .wrapper .footer .pagos h6 {
+        margin-top: 80px;
+    }
+    .wrapper .footer .pagos img{
+			margin:5px;
+			width: 60%;
+    }
+}		
+        
+/*     Estilos para desktop       */
+@media screen and (min-width: 992px){
+    .wrapper .main .sitio {
+        width: 32%;
+    }
+    .wrapper .header .navegacion {
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+    }
+    .wrapper .header .navegacion .menu-bar {
+        display: none;
+    }
+    .wrapper .header .navegacion nav {
+        position: static;
+        width: auto;
+        align-self: flex-end;
+        margin-right: 5%;
+    }
+    .wrapper .header .navegacion nav ul li{
+        display: inline;
+    }
+    .wrapper .header .navegacion nav ul li a {
+						color: #000;
+						background-color: #fff;
+						width: auto;
+						padding: 5px;
+					}
+    .wrapper .header .navegacion nav ul li a:hover {
+						color: #ffcc00;
+						background-color: #fff;
+						width: auto;
+						padding: 5px;
+					}
+    .dropdown {
+        position: relative;
+    }
+    .dropdown-content {
+        position: absolute;
+        padding: 10px;
+        top: 20px;
+        left: 0px;
+    }
+    .wrapper .footer .pagos img{
+			width: 40%;
+    }	
+    
+    
+/*    comiensa*/
+    
+    .wrapper .header .slide .imagen {
+            background-color: #ffcc00;
+			position: absolute;
+			bottom: 0%;
+    		left: 50%;
+    		width: 80%;
+            height: auto;
+            transform: translate(-50%, -50%);
+			padding: 30px;
+            border-radius: 5px;
+		}
+			
+			
+    		
+
+		.wrapper .header .slide .imagen h1 {
+			font-size: 1.5em;
+			color: #000;
+			line-height: 1.2em;
+			text-align: center;
+		}
+/*  termoina*/
+}
+					
+			
+        
+        
+    
+       
+                        
+
+        
+       
+        
+    
+        
+
+            
+           
+			
+
+			
+			
+			
+
+
+
+			
+
+
+
+
+
+			
+
+
+			
+			
+			
+        
+        
+
+
+			
+				
+				
+			
+
+		
+
